@@ -44,7 +44,7 @@ class SauceLabsPlugin implements Plugin<Project> {
                                 // use outputFile from packageApp task
                                 String apkFilePath = task.outputFile.toString()
                                 String apkFileName = FilenameUtils.getName(apkFilePath);
-                                project.logger.info("Uploading ${apkFilePath} using userName ${userName} and accessKey ${accessKey}")
+                                project.logger.info("Uploading ${apkFilePath}")
 
                                 uploadApk(project, extension, apkFilePath)
 

@@ -23,6 +23,10 @@ so installation consists of adding the following to your ***build.gradle*** file
 
         apply plugin: 'saucelabs'
 
+ 3. Configure your sauce labs credentials:
+
+        Make sure SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables are set
+
 Complete Example
 ----------------
 For convenience, here is a snippet of a complete ***build.gradle*** file, including the additions above.
