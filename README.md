@@ -90,4 +90,4 @@ License
  limitations under the License.
 ```
 [1]: https://docs.saucelabs.com/reference/rest-api/#upload-file
-[1]: https://github.com/Manabu-GT/saucelabs-gradle-plugin/tree/master/sample/appium
+[2]: https://github.com/Manabu-GT/saucelabs-gradle-plugin/tree/master/sample/appium
