@@ -56,17 +56,20 @@ Parameters
             testCommand "py.test sample/appium/android_sauce_labs.py" (required, your test script)
         }
     }
+ 
+ By setting the overwrite to true, the plugin will overwrite the apk file already stored in Sauce temporary storage.
+ It is the default behavior of the Sauce Labs [Upload API][1].
 
 Inserted Environment variables
 --------------------------------
 The plugin will inject the following environment variables and make them available to your test script.
 
-SAUCE_COMMIT - Git commit that the current build is testing.
-SAUCE_APK_FILE - APK file name uploaded to the sauce labs.
-SAUCE_APK_VERSION_NAME - Android application version name in the manifest.
-SAUCE_APK_VERSION_CODE - Android application version code in the manifest.
+- SAUCE_COMMIT - Git commit that the current build is testing.
+- SAUCE_APK_FILE - APK file name uploaded to the sauce labs.
+- SAUCE_APK_VERSION_NAME - Android application version name in the manifest.
+- SAUCE_APK_VERSION_CODE - Android application version code in the manifest.
 
-For its sample usage, please look at the test code of the [provided sample][1].
+For its sample usage, please look at the test code of the [provided sample][2].
 
 License
 ---------------------
@@ -86,5 +89,5 @@ License
  See the License for the specific language governing permissions and
  limitations under the License.
 ```
-
+[1]: https://docs.saucelabs.com/reference/rest-api/#upload-file
 [1]: https://github.com/Manabu-GT/saucelabs-gradle-plugin/tree/master/sample/appium
