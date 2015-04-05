@@ -1,5 +1,10 @@
 SauceLabs Gradle Plugin for Android
-------------------------------------
+=====================================
+
+[![Build Status](https://travis-ci.org/Manabu-GT/saucelabs-gradle-plugin.svg?branch=master)](https://travis-ci.org/Manabu-GT/saucelabs-gradle-plugin)
+[![Sauce Test Status](https://saucelabs.com/buildstatus/manabu1984)](https://saucelabs.com/u/manabu1984)
+
+With this plugin, you can upload your APK directly to [Sauce Labs][1] and run test script easily.
 
 Compatibility
 --------------
@@ -58,18 +63,18 @@ Parameters
     }
  
  By setting the overwrite to true, the plugin will overwrite the apk file already stored in Sauce temporary storage.
- It is the default behavior of the Sauce Labs [Upload API][1].
+ It is the default behavior of the Sauce Labs [Upload API][2].
 
-Inserted Environment variables
+Injected Environment variables
 --------------------------------
 The plugin will inject the following environment variables and make them available to your test script.
 
-- SAUCE_COMMIT - Git commit that the current build is testing.
+- SAUCE_COMMIT - Git commit hash that the current build is testing.
 - SAUCE_APK_FILE - APK file name uploaded to the sauce labs.
 - SAUCE_APK_VERSION_NAME - Android application version name in the manifest.
 - SAUCE_APK_VERSION_CODE - Android application version code in the manifest.
 
-For its sample usage, please look at the test code of the [provided sample][2].
+For its sample usage, please look at the test code of the [provided sample][3].
 
 License
 ---------------------
@@ -89,5 +94,7 @@ License
  See the License for the specific language governing permissions and
  limitations under the License.
 ```
-[1]: https://docs.saucelabs.com/reference/rest-api/#upload-file
-[2]: https://github.com/Manabu-GT/saucelabs-gradle-plugin/tree/master/sample/appium
+
+[1]: https://saucelabs.com/
+[2]: https://docs.saucelabs.com/reference/rest-api/#upload-file
+[3]: https://github.com/Manabu-GT/saucelabs-gradle-plugin/tree/master/sample/appium
