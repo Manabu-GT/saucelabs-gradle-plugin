@@ -37,14 +37,17 @@ artifacts {
     archives javadocJar
 }
 
-// for local development
-//def repo = "file://$buildDir/mvn-repo/"
+// used for pom.groupId
+group = GROUP
+// used for pm.version
+version = VERSION_NAME
 
+// for local development
 task publishLocal(type: Upload) {
     configuration = configurations.archives
     repositories {
         mavenDeployer {
-            repository(url: uri('repo'))
+            repository(url: "file://$buildDir/mvn-repo/")
         }
     }
 }
@@ -55,9 +58,7 @@ uploadArchives {
 
             beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
-            pom.groupId = GROUP
             pom.artifactId = POM_ARTIFACT_ID
-            pom.version = VERSION_NAME
 
             repository(url: getReleaseRepositoryUrl()) {
                 authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
