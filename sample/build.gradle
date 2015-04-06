@@ -16,7 +16,7 @@ buildscript {
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "22.0.0"
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
         applicationId "com.ms_square.saucelabs_gradle_plugin"
