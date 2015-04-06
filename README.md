@@ -4,7 +4,8 @@ SauceLabs Gradle Plugin for Android
 [![Build Status](https://travis-ci.org/Manabu-GT/saucelabs-gradle-plugin.svg?branch=master)](https://travis-ci.org/Manabu-GT/saucelabs-gradle-plugin)
 [![Sauce Test Status](https://saucelabs.com/buildstatus/manabu1984)](https://saucelabs.com/u/manabu1984)
 
-With this plugin, you can upload your APK directly to [Sauce Labs][1] and run test script easily.
+This plugin integrates SauceLabs platform with the Gradle build system.
+With this plugin, you can upload your APK to [Sauce Labs][1] and run test script directly via Android Studio or command line.
 
 Compatibility
 --------------
@@ -25,7 +26,9 @@ so installation consists of adding the following to your ***build.gradle*** file
 
  3. Configure your sauce labs credentials:
 
-        Make sure SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables are set
+        # Make sure SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables are set
+        export SAUCE_USERNAME=<your saucelabs username>
+        export SAUCE_ACCESS_KEY=<your saucelabs accessKey>
 
 Complete Example
 ----------------
